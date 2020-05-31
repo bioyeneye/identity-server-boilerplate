@@ -18,7 +18,7 @@ namespace IdentityProvider.API.Extensions
             services.AddDbContext<IdentityDbContext>(options =>
             {
                 options.UseOpenIddict<Guid>();
-                options.UseOpenIddict<IdentityOpenIddictApplication, IdentityOpenIddictAuthorization, IdentityOpenIddictScope, IdentityOpenIddictToken, Guid>();
+                //options.UseOpenIddict<IdentityOpenIddictApplication, IdentityOpenIddictAuthorization, IdentityOpenIddictScope, IdentityOpenIddictToken, Guid>();
                 options.UseSqlServer(connectionString, sqlServerOptionsAction: sqlOptions => { sqlOptions.EnableRetryOnFailure(); });
             });
 

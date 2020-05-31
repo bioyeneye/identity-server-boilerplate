@@ -60,6 +60,7 @@ namespace IdentityProvider.API.Controllers
                 {
                     foreach (var token in tokens)
                     {
+                        token.Status = "invalid";
                         _ = tokenManager.UpdateAsync(token);
                     }
                 }
